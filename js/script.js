@@ -1,5 +1,4 @@
-// Inicjalizacja mapy
-var mymap = L.map('mapid').setView([51.4000, 21.1500], 13); // Domyślna lokalizacja: Warszawa
+var mymap = L.map('mapid').setView([51.4000, 21.1500], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
@@ -8,17 +7,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var markers = L.layerGroup().addTo(mymap);
 var tripList = document.getElementById('trip-list');
 var addPlaceBtn = document.getElementById('add-place-btn');
-var downloadPdfBtn = document.getElementById('download-pdf-btn'); // Nowy przycisk
+var downloadPdfBtn = document.getElementById('download-pdf-btn'); 
 var placeLatInput = document.getElementById('place-lat');
 var placeLngInput = document.getElementById('place-lng');
 
-// Dodajemy obsługę kliknięcia na mapie
 mymap.on('click', function(e) {
     var lat = e.latlng.lat;
     var lng = e.latlng.lng;
-    
-    // Wypełniamy pola formularza współrzędnymi z kliknięcia
-    placeLatInput.value = lat.toFixed(5); // Zaokrąglamy do 5 miejsc po przecinku
+
+    placeLatInput.value = lat.toFixed(5);
     placeLngInput.value = lng.toFixed(5);
 });
 
