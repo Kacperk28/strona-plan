@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Podróży</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <header>
+        <h1>Plan Podróży</h1>
+    </header>
+
+    <div class="main-container">
+        <div id="mapid"></div>
+
+        <div class="sidebar">
+            <h2>Dodaj nowe miejsce</h2>
+            <div class="input-group">
+                <label for="place-name">Nazwa miejsca:</label>
+                <input type="text" id="place-name">
+            </div>
+            <div class="input-group">
+                <label for="place-lat">Szerokość geograficzna:</label>
+                <input type="text" id="place-lat" placeholder="np. 51.4000">
+            </div>
+            <div class="input-group">
+                <label for="place-lng">Długość geograficzna:</label>
+                <input type="text" id="place-lng" placeholder="np. 21.1500">
+            </div>
+            <div class="input-group">
+                <label for="place-notes">Notatki:</label>
+                <textarea id="place-notes" rows="3"></textarea>
+            </div>
+            <div class="input-group">
+                <button id="add-place-btn">Dodaj do planu</button>
+            </div>
+            <div class="input-group">
+                <button id="download-pdf-btn">Pobierz PDF</button>
+            </div>
+
+            <hr>
+
+            <h2>Twój plan</h2>
+            <ul id="trip-list"></ul>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
