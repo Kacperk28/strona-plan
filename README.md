@@ -1,2 +1,2 @@
 # strona-plan
-Planowanie podróży
+Planowanie podróży z zapisem trasy w pliku
